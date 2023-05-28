@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+    <title>Eco Tracker!</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="logo.png" alt="eco tracker logo" />
+                <h1>Eco Tracker!</h1>
+            </div>
+
+            <div class="nav-items">
+                <ul>
+                    <li>HOME</li>
+                    <li>BLOG</li>
+                    <li>NEWS</li>
+                    <li>ABOUTUS</li>
+                    <li>MEMBERSHIP&GIVING</li>
+                </ul>
+            </div>
+
+            <div class="auth-items">
+                <button>Sign In</button>
+                <button id="modal-trigger" onclick="openModal()">DONATE</button>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <h1>Discover Your Carbon Footprint!</h1>
+            <h2>Register and Calculate Now</h2>
+            <button id="modal-trigger" onclick="openModal()">Get Started</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="stats">
+            <h1 class="custom-color">1,500,000+</h1>
+            <h2>Carbon Footprints Calculated</h2>
+            <h3>Calculate Yours Now!</h3>
+            <h4>Sign Up and <span id="modaltrigger" onclick="openModal()">discover</span> today.</h4>
+        </section>
+
+        <section class="about-section">
+            <h1 class="custom-color">Who are we?</h1>
+            <div class="about-cards">
+                <div class="about-card">
+                    <img src="light-bulb.png" alt="light bulb">
+                    <h1 style="color: #2b1eaf">Our Story</h1>
+    
+                    <p>
+                        It all started as a group of friends who wanted to make a difference in the world. Carbon Tiptoe
+                        carbon footprint calculator has been educating millions of users on their carbon footprint and
+                        helping them to make a positive change.
+                    </p>
+    
+                    <button style="background-color: #2b1eaf">More</button>
+                </div>
+    
+                <div class="about-card">
+                    <img src="earth.png" alt="earth globe">
+                    <h1 style="color: #1eaf2b">Our Mission</h1>
+                    <p>
+                        We are a team of developers who are passionate about the environment and tackling climate change. It
+                        is our mission to help users better understand their carbon footprint and easy steps to make a
+                        change. It is our hopes that you will find value in our application.
+                    </p>
+    
+                    <button style="background-color: #1eaf2b">More</button>
+                </div>
+    
+                <div class="about-card">
+                    <img src="calculator.png" alt="calculator">
+                    <h1 class="custom-color">Calculator</h1>
+                    <p>
+                        Our carbon footprint calculator is unlike any other. We have a state-of-the-art algorithm. The
+                        calculator is designed to be easy to use. It is our hopes that this tool will bring awareness to
+                        users carbon emissions and provide the resources to help them make a postive change.
+                    </p>
+    
+                    <button class="custom-background-color" id="trigger-modal" onclick="openModal()">More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="sponsors-section">
+            <h1 class="custom-color">Our Sponsors</h1>
+            <div class="sponsor-logos">
+                <img src="google.png" alt="google logo"/>
+                <img src="meta.png" alt="meta logo"/>
+                <img src="tesla.png" alt="tesla logo"/>
+                <img src="conservation.png" alt="department of conservation logo"/>
+                <img src="wwf.png" alt="world wildlife fund logo"/>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="logo-group">
+            <img src="logo.png" alt="eco tracker logo" />
+            <h1>Eco Tracker!</h1>
+        </div>
+
+        <h2>Follow us on social media:</h2>
+
+        <div class="socials">
+            <img src="facebook.png" alt="facebook logo"/>
+            <img src="twitter.png" alt="twitter logo"/>
+            <img src="instagram.png" alt="instagram logo"/>
+            <img src="linkedin.png" alt="linkedin logo"/>
+        </div>
+
+        <span class="span-author">
+            <a href="https://www.pexels.com/">Images provided by Pexels</a> |
+            <a href="https://www.flaticon.com/" title="Icon Source">Icons provided by Flaticons</a> 
+        </span>
+    </footer>
+   
+
+
+    <div class="modal" id="myModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+
+            <div class="modal-body">
+                <h1 class="custom-color">Registration Form</h1>
+
+                <div id="ct-form">
+                    <form>
+                        <div class="form-section" id="userDetails">
+                            <h2>User details</h2>
+                            <span>Given Name</span>
+                            <input class="custom-color" id="givenNameInput" type="text" placeholder="Given name" />
+                            <span>Surname</span>
+                            <input class="custom-color" type="text" placeholder="Surname" />
+                            <span>Username</span>
+                            <input class="custom-color" type="text" placeholder="Username" />
+                            <span>Password</span>
+                            <input class="custom-color" type="password" placeholder="Password" />
+                        </div>
+
+                        <div class="form-section" id="addresses">
+                            <h2>Addresses</h2>
+                            <span>Home Address</span>
+                            <input class="custom-color" type="text" placeholder="Home Address" />
+                            <span>Work Address</span>
+                            <input class="custom-color" type="text" placeholder="Work Address" />
+                        </div>
+
+                        <div class="form-section" id="contacts">
+                            <h2>Contacts</h2>
+                            <span>Mobile Number</span>
+                            <input class="custom-color" type="tel" placeholder="Mobile Number" />
+                            <span>Email</span>
+                            <input class="custom-color" type="email" placeholder="Email" />
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="custom-background-color">Submit</button>
+                <p>Already have an account? Login <a class="custom-color">here</a>.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

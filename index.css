@@ -1,0 +1,284 @@
+:root {
+    --main-bg-color: #f0f4f8;
+    --navbar-bg-color: #4caf50;
+    --navbar-font-color: #ffffff;
+    --button-bg-color: #81c784;
+    --button-font-color: #ffffff;
+    --header-content-bg-image: url("background-1.jpg");
+    --main-padding: 20px;
+    --stats-bg-color: #e8f5e9;
+    --heading-color: #388e3c;
+    --modal-bg-color: rgba(0,0,0,0.4);
+    --modal-content-bg-color: #fefefe;
+    --modal-content-border-color: #888;
+    --close-btn-color: #aaaaaa;
+    --modal-header-padding: 24px;
+    --modal-body-padding: 48px;
+    --form-section-gap: 4px;
+    --footer-bg-color: #20dd2c;
+    --footer-font-color: white;
+    --logo-max-width: 50px;
+    --logo-max-height: 50px;
+    --custom-color: #ba8210;
+    --sponsors-section-font-size: 48px;
+    --sponsor-logos-gap: 48px;
+    --sponsor-logos-width: 64px;
+    --sponsor-logos-height: 64px;
+    --about-section-padding: 24px 0 48px 0;
+    --about-section-bg-image: url("background-2.jpg");
+    --about-section-h1-font-size: 3em;
+    --about-cards-gap: 100px;
+    --about-cards-padding: 32px 16px;
+    --about-card-bg-color: white;
+    --about-card-shadow-color: rgba(0, 0, 0, 0.2);
+    --about-card-padding: 48px 32px;
+    --about-card-width: 300px;
+    --about-card-border-radius: 20px;
+    --about-card-img-width: 120px;
+    --about-card-img-height: 120px;
+    --footer-padding: 64px 0;
+    --footer-h1-font-size: 48px;
+    --socials-margin-bottom: 40px;
+    --socials-img-width: 32px;
+    --socials-img-height: 32px;
+    --logo-group-img-width: 100px;
+    --logo-group-img-height: 100px;
+    --logo-group-img-margin: 12px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-bg-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--main-padding);
+    background-color: var(--navbar-bg-color);
+}
+
+.navbar .logo h1, .navbar .nav-items ul li {
+    color: var(--navbar-font-color);
+}
+
+.navbar .nav-items ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-family: 'Verdana', sans-serif;
+    font-size: 1.2em;
+}
+
+.navbar .nav-items ul li {
+    margin: 0 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.navbar .auth-items button {
+    background-color: var(--button-bg-color);
+    border: none;
+    color: var(--button-font-color);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.header-content {
+    padding-top: 200px;
+    background-image: var(--header-content-bg-image);
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.header-content h1, .header-content h2 {
+    color: rgb(231, 122, 13); /* 深红色 */
+    font-weight: bold; /* 加粗 */
+}
+
+.header-content h1 {
+    font-size: 3em; /* 调整h1的大小 */
+}
+
+.header-content h2 {
+    font-size: 2em; /* 调整h2的大小 */
+}
+
+#modal-trigger {
+    background-color: #4CAF50; /* 深绿色 */
+    color: white; /* 白色字体 */
+    padding: 14px 24px; /* 内部填充 */
+    font-size: 16px; /* 字体大小 */
+    border: none; /* 没有边框 */
+    cursor: pointer; /* 鼠标指针形状 */
+    border-radius: 5px; /* 边角圆滑 */
+    transition: all 0.3s; /* 过渡效果 */
+}
+
+#modal-trigger:hover {
+    background-color: #45a049; /* 鼠标悬停时的背景颜色 */
+}
+
+.main {
+    padding: var(--main-padding);
+}
+
+.stats {
+    background-color: var(--stats-bg-color);
+    text-align: center;
+    padding: var(--main-padding) 0;
+}
+
+.about h1, .partners h1 {
+    color: var(--heading-color);
+}
+
+.about-cards {
+    display: flex;
+    justify-content: space-around;
+    padding: var(--main-padding) 0;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--modal-bg-color);
+}
+
+.modal-content {
+    background-color: var(--modal-content-bg-color);
+    margin: auto;
+    padding: var(--main-padding);
+    border: 1px solid var(--modal-content-border-color);
+    width: 80%;
+}
+
+.close {
+    color: var(--close-btn-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar .logo img, .footer-content img {
+    max-width: var(--logo-max-width);
+    max-height: var(--logo-max-height);
+}
+
+.custom-color {
+    color: var(--custom-color);
+}
+
+/* Sponsors Section */
+.sponsors-section {
+    text-align: center;
+    
+}
+
+.sponsors-section h1 {
+    font-size: var(--sponsors-section-font-size);
+}
+
+.sponsor-logos {
+    display: flex;
+    justify-content: center;
+    gap: var(--sponsor-logos-gap);
+}
+
+.sponsors-section img {
+    width: var(--sponsor-logos-width);
+    height: var(--sponsor-logos-height);
+}
+
+/* About Section */
+.about-section {
+    padding: var(--about-section-padding);
+    background-image: var(--about-section-bg-image);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-section h1 {
+    text-align: center;
+    font-size: var(--about-section-h1-font-size);
+}
+
+.about-cards {
+    display: flex;
+    justify-content: center;
+    gap: var(--about-cards-gap);
+    padding: var(--about-cards-padding);
+}
+
+.about-card {
+    background-color: var(--about-card-bg-color);
+    box-shadow: 0 4px 8px 0 var(--about-card-shadow-color);
+    padding: var(--about-card-padding);
+    width: var(--about-card-width);
+    border-radius: var(--about-card-border-radius);
+    text-align: center;
+}
+
+.about-card img {
+    width: var(--about-card-img-width);
+    height: var(--about-card-img-height);
+}
+
+.about-card h1 {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+
+/* footer */
+footer {
+    text-align: center;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-font-color);
+    padding: var(--footer-padding);
+}
+
+footer h1 {
+    font-size: var(--footer-h1-font-size);
+}
+
+.socials {
+    margin-bottom: var(--socials-margin-bottom);
+}
+
+.socials img, .logo-group img {
+    cursor: pointer;
+    width: var(--socials-img-width);
+    height: var(--socials-img-height);
+    margin: var(--logo-group-img-margin);
+}
+
+.logo-group img {
+    width: var(--logo-group-img-width);
+    height: var(--logo-group-img-height);
+}
+
